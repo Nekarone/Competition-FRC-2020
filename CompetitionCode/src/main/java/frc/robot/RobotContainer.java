@@ -130,12 +130,12 @@ public class RobotContainer {
         }, 
         CLIMBER
       )
-  );
-  DRIVETRAIN.setDefaultCommand(
-    new RunCommand(
-      () -> DRIVETRAIN.arcadeDrive(driver.getRawAxis(FORWARD_AXIS_LEFT), -driver.getRawAxis(HORIZ_AXIS_RIGHT)),
-      DRIVETRAIN
-  ));
+    );
+    DRIVETRAIN.setDefaultCommand(
+      new RunCommand(
+        () -> DRIVETRAIN.arcadeDrive(driver.getRawAxis(FORWARD_AXIS_LEFT), -driver.getRawAxis(HORIZ_AXIS_RIGHT)),
+        DRIVETRAIN
+    ));
 
     // Shooter
     toggleShooterButton.toggleWhenPressed(new EnableShooter(SHOOTER, STORAGE));
